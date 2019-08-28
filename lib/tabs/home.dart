@@ -35,30 +35,31 @@ class _HomeBodyState extends State<HomeBody> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        
         MediaQuery.removePadding(
           removeTop: true,
           context: context,
           child: NotificationListener(
-          onNotification: (notification) {
-            if (notification is ScrollNotification && notification.depth == 0) {
-              _onScroll(notification.metrics.pixels);
-            }
-            return notification is ScrollNotification && notification.depth == 0;
-          },
-          child: ListView(
-            children: <Widget>[
-              Container(
-                child: Banner(),
-                height: 200,
-              ),
-              Container(
-                height: 1000,
-                color: Colors.blue,
-              )
-            ],
+            onNotification: (notification) {
+              if (notification is ScrollNotification &&
+                  notification.depth == 0) {
+                _onScroll(notification.metrics.pixels);
+              }
+              return notification is ScrollNotification &&
+                  notification.depth == 0;
+            },
+            child: ListView(
+              children: <Widget>[
+                Container(
+                  child: Banner(),
+                  height: 200,
+                ),
+                Container(
+                  height: 1000,
+                  color: Colors.blue,
+                )
+              ],
+            ),
           ),
-        ),
         ),
         Opacity(
             opacity: _appBarOpacity,
@@ -67,7 +68,7 @@ class _HomeBodyState extends State<HomeBody> {
               alignment: Alignment.bottomCenter,
               color: Colors.white,
               height: _appBarHeight,
-              child: Text("首页",style: TextStyle(fontSize: 18)),
+              child: Text("首页", style: TextStyle(fontSize: 18)),
             )),
       ],
     );
