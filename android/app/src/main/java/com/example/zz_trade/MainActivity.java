@@ -1,4 +1,4 @@
-package com.example.zz_trade;
+package com.example.zz_trip;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
