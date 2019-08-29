@@ -4,15 +4,15 @@ import 'package:zz_trip/tabs/journey.dart';
 import 'package:zz_trip/tabs/mine.dart';
 import 'package:zz_trip/tabs/souvenir.dart';
 
-class TabBarView extends StatefulWidget {
-  TabBarView({Key key}) : super(key: key);
+class ZZTabBarView extends StatefulWidget {
+  ZZTabBarView({Key key}) : super(key: key);
   @override
   State<StatefulWidget> createState() {
-    return _TabBarViewState();
+    return _ZZTabBarViewState();
   }
 }
 
-class _TabBarViewState extends State<TabBarView> {
+class _ZZTabBarViewState extends State<ZZTabBarView> {
 
   final _pages = [
     HomePage(),
